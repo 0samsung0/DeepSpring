@@ -8,9 +8,10 @@ import java.time.LocalDateTime;
 @Component
 public class TimeService {
 
-    @Autowired
+
     GreetingService gS;
 
+    @Autowired
     public TimeService(GreetingService greetingService) {
         this.gS = greetingService;
     }
