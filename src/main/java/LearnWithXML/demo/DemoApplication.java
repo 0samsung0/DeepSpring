@@ -2,6 +2,7 @@ package LearnWithXML.demo;
 
 import LearnWithXML.demo.provider.EnglishProvider;
 import LearnWithXML.demo.provider.MessageProvider;
+import LearnWithXML.demo.provider.UndefinedClass;
 import LearnWithXML.demo.service.AdvancedService;
 import LearnWithXML.demo.service.GreetingService;
 import jakarta.annotation.Resource;
@@ -21,9 +22,12 @@ public class DemoApplication {
 				GreetingService.class);
 		AdvancedService as = ctx.getBean(
 				AdvancedService.class);
+//		UndefinedClass uc = ctx.getBean(
+//				UndefinedClass.class
+//		);  ошибка. класс не помечен как @Service-Component...
+	 	//MessageProvider rp;
 
-		//MessageProvider rp;
-
+		//uc.find();
 		gs.say();
 		as.printAll();
 		as.printKey();

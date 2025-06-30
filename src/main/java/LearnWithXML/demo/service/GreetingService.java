@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class GreetingService {
 
-//    @Autowired
-//    @Qualifier("bean2")
-//    MessageProvider mp;
+    @Autowired
+    @Qualifier("bean1.5")
+    MessageProvider mp;
 
     public void say(){
-        System.out.println("mp.getMessage()");
+        System.out.println("mp.getMessage(1.5)");
     }
 }

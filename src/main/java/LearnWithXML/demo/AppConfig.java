@@ -16,6 +16,11 @@ public class AppConfig {
 
     @Bean("bean1")
     public FrenchProvider frenchProvider(){
+        return new FrenchProvider(66);
+    }
+
+    @Bean("bean1.5")
+    public FrenchProvider frenchProvider2(){
         return new FrenchProvider();
     }
 

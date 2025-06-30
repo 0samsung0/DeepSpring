@@ -6,8 +6,16 @@ import org.springframework.stereotype.Component;
 
 @Component("fre")
 public class FrenchProvider implements MessageProvider{
+
+    public FrenchProvider(){
+
+    }
+    Integer b = null;
+    public FrenchProvider(Integer a){
+        b = a;
+    }
     @Override
     public String getMessage() {
-        return "Bonjour";
+        return "Bonjour" + b;
     }
 }
